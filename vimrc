@@ -31,17 +31,6 @@ Plugin 'pangloss/vim-javascript'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 " }}}
 " setting -------------------------------------------------------------------{{{ 
 set encoding=utf-8
@@ -60,12 +49,16 @@ set hlsearch                          " search highlighting
 set incsearch                         " incremental search
 set colorcolumn=+1
 set textwidth=80
+
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
 "" bo backup file
 set nobackup                          " no *~ backup files
 set noswapfile
 set nowritebackup
+
+" Resize splits when the window is resized
+au VimResized * :wincmd =
 
 "" theme conf
 set t_Co=256                          " using 256-color
@@ -84,16 +77,6 @@ set laststatus=2
 set showtabline=2
 set cursorline
 
-"" key mapping
-
-" enter to cancel searched highlight
-noremap <CR> :nohlsearch<CR>
-
-" select ALL
-"map <C-A> ggVG
-
-" nerdcommenter shortcut
-map <Leader><Leader> <Leader>c<space>
 
 " special char
 set list
@@ -122,6 +105,36 @@ noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
+" }}}
+" key mapping --------------------------------------------------------------{{{
+
+" enter to cancel searched highlight
+noremap <CR> :nohlsearch<CR>
+
+" nerdcommenter shortcut
+map <Leader><Leader> <Leader>c<space>
+
+" source .vimrc
+nnoremap <leader>so :so ~/.vimrc<cr>
+
+" NERDTreeToggle
+nnoremap <F2> :NERDTreeToggle<cr>
+
+" Insert Mode Completion {{{
+
+inoremap <c-f> <c-x><c-f>
+inoremap <c-]> <c-x><c-]>
+inoremap <c-l> <c-x><c-l>
+
+" }}}
+
+" }}}
+" Quick editing ----------------------------------------------------------- {{{
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>et :vsplit ~/.tmux.conf<cr>
+nnoremap <leader>eg :vsplit ~/.gitconfig<cr>
+
 " }}}
 " Filetype-specific ---------------------------------------------------------{{{
 
