@@ -93,6 +93,7 @@ set splitbelow
 set splitright
 
 " folding
+set foldlevel=100
 set foldmethod=marker
 nnoremap <Space> za
 vnoremap <Space> za
@@ -125,6 +126,12 @@ nnoremap <F2> :NERDTreeToggle<cr>
 inoremap <c-f> <c-x><c-f>
 inoremap <c-]> <c-x><c-]>
 inoremap <c-l> <c-x><c-l>
+
+" identation
+nmap <TAB> v>
+nmap <S-TAB> v<
+vmap <TAB> >gv
+vmap <S-TAB> <gv
 
 " }}}
 
