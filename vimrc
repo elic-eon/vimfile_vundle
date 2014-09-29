@@ -29,6 +29,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
