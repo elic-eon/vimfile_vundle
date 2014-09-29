@@ -28,6 +28,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-endwise'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -180,4 +181,6 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " Tagbar {{{
 let g:tagbar_left=1
 "}}}
+
+
 "}}}
