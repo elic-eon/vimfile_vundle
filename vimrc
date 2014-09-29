@@ -80,7 +80,7 @@ set cursorline
 
 " special char
 set list
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-
 nmap <leader>l :set list!<CR>
 "set showbreak=↪
 
@@ -106,6 +106,8 @@ noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
+
+set cmdheight=2
 " }}}
 " key mapping --------------------------------------------------------------{{{
 
@@ -126,6 +128,9 @@ nnoremap <F2> :NERDTreeToggle<cr>
 inoremap <c-f> <c-x><c-f>
 inoremap <c-]> <c-x><c-]>
 inoremap <c-l> <c-x><c-l>
+
+" switch to UTF-8 encoding
+nnoremap <leader>u :e ++enc=utf-8<CR>
 
 " identation
 nmap <TAB> v>

@@ -1,2 +1,5 @@
 .netrwhist
 tags
+*.swp
+*.vmb
+doc/tags
