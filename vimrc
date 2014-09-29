@@ -183,5 +183,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:tagbar_left=1
 "}}}
 
+" mult-cursor {{{
+" Map start key separately from next key
+let g:multi_cursor_start_key='<F6>'
+" }}}
 
 "}}}
