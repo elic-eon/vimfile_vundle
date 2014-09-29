@@ -27,6 +27,7 @@ Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'pangloss/vim-javascript'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,6 +139,10 @@ nmap <S-TAB> v<
 vmap <TAB> >gv
 vmap <S-TAB> <gv
 
+
+" Tagbar hotkey
+nmap <F3> :TagbarToggle<CR>
+
 " }}}
 
 " }}}
@@ -167,7 +172,12 @@ augroup END
 " }}}
 " }}}
 " Plugin --------------------------------------------------------------------{{{
+
 "Supertab {{{
 let g:SuperTabDefaultCompletionType = "<c-n>"
+"}}}
+
+" Tagbar {{{
+let g:tagbar_left=1
 "}}}
 "}}}
