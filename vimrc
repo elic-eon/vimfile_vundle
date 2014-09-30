@@ -87,7 +87,7 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-
 nmap <leader>l :set list!<CR>
 "set showbreak=↪
 
-" 
+" seem useless
 set fillchars=diff:⣿,vert:│
 set fillchars=diff:⣿,vert:\|
 
@@ -98,8 +98,6 @@ set splitright
 " folding
 set foldlevel=100
 set foldmethod=marker
-nnoremap <Space> za
-vnoremap <Space> za
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
@@ -125,6 +123,15 @@ nnoremap <leader>so :so ~/.vimrc<cr>
 
 " NERDTreeToggle
 nnoremap <F2> :NERDTreeToggle<cr>
+
+" folding keymap
+" close when open, and open when close
+nnoremap <Space> za
+vnoremap <Space> za
+" Open all fold
+nnoremap <leader>A zR
+" Close all fold
+nnoremap <leader>C zM
 
 " Insert Mode Completion {{{
 
