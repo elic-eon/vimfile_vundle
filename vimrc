@@ -30,6 +30,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,9 +66,10 @@ au VimResized * :wincmd =
 
 "" theme conf
 set t_Co=256                          " using 256-color
+set background=dark
 
 try
-  let g:solarized_termcolors=256
+  "let g:solarized_termcolors=256
   "colorscheme solarized_dark
   colorscheme Tomorrow-Night
   "let g:solarized_drgrade=0
@@ -79,7 +81,6 @@ let g:airline_powerline_fonts=1
 set laststatus=2
 set showtabline=2
 set cursorline
-
 
 " special char
 set list
@@ -96,18 +97,11 @@ set splitbelow
 set splitright
 
 " folding
+set foldcolumn=1
 set foldlevel=100
 set foldmethod=marker
 
-" sudo to write
-cnoremap w!! w !sudo tee % >/dev/null
-
-" Move cursor by display lines when wrapping
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
-
+" command height
 set cmdheight=2
 " }}}
 " key mapping --------------------------------------------------------------{{{
@@ -124,21 +118,6 @@ nnoremap <leader>so :so ~/.vimrc<cr>
 " NERDTreeToggle
 nnoremap <F2> :NERDTreeToggle<cr>
 
-" folding keymap
-" close when open, and open when close
-nnoremap <Space> za
-vnoremap <Space> za
-" Open all fold
-nnoremap <leader>A zR
-" Close all fold
-nnoremap <leader>C zM
-
-" Insert Mode Completion {{{
-
-inoremap <c-f> <c-x><c-f>
-inoremap <c-]> <c-x><c-]>
-inoremap <c-l> <c-x><c-l>
-
 " switch to UTF-8 encoding
 nnoremap <leader>u :e ++enc=utf-8<CR>
 
@@ -148,9 +127,32 @@ nmap <S-TAB> v<
 vmap <TAB> >gv
 vmap <S-TAB> <gv
 
-
 " Tagbar hotkey
 nmap <F3> :TagbarToggle<CR>
+
+" sudo to write
+cnoremap w!! w !sudo tee % >/dev/null
+
+" Move cursor by display lines when wrapping
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" folding keymap {{{
+" close when open, and open when close
+nnoremap <Space> za
+vnoremap <Space> za
+" Open all fold
+nnoremap <leader>A zR
+" Close all fold
+nnoremap <leader>C zM
+"}}}
+
+" Insert Mode Completion {{{
+inoremap <c-f> <c-x><c-f>
+inoremap <c-]> <c-x><c-]>
+inoremap <c-l> <c-x><c-l>
 
 " }}}
 
@@ -177,6 +179,12 @@ augroup END
 augroup ft_c
     au!
     au FileType c setlocal foldmethod=marker foldmarker={,}
+augroup END
+" }}}
+" HTML {{{
+augroup ft_html
+    au!
+    au FileType html setlocal foldmethod=indent tabstop=2
 augroup END
 " }}}
 " }}}
