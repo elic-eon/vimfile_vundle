@@ -31,6 +31,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
+Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -187,6 +188,12 @@ augroup ft_html
     au FileType html setlocal foldmethod=indent tabstop=2
 augroup END
 " }}}
+" HTML {{{
+augroup ft_vimwiki
+    au!
+    au FileType vimwiki setlocal foldmethod=indent tabstop=2
+augroup END
+" }}}
 " }}}
 " Plugin --------------------------------------------------------------------{{{
 
@@ -196,6 +203,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Tagbar {{{
 let g:tagbar_left=1
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
 "}}}
 
 " mult-cursor {{{
@@ -203,4 +212,14 @@ let g:tagbar_left=1
 let g:multi_cursor_start_key='<F6>'
 " }}}
 
+" vimwiki settings {{{
+let vimwiki_path=$HOME.'/vimwiki/'
+let vimwiki_html_path=$HOME.'/vimwiki_html/'
+let g:vimwiki_list = [{'path_html':vimwiki_html_path,
+			\ 'template_path':vimwiki_html_path.'vimwiki-assets/',
+			\ 'template_default': 'default',
+			\ 'template_ext': '.tpl',
+			\ 'auto_export': 0}]
+nnoremap <leader>wha :VimwikiAll2HTML<CR>
+"}}}
 "}}}
