@@ -55,6 +55,9 @@ set incsearch                         " incremental search
 set colorcolumn=+1
 set textwidth=80
 
+" tab setting
+set tabstop=4
+
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
 "" bo backup file
@@ -176,10 +179,15 @@ augroup END
 
 " }}}
 " C {{{
-
 augroup ft_c
     au!
     au FileType c setlocal foldmethod=marker foldmarker={,}
+augroup END
+" }}}
+" lex {{{
+augroup ft_lex
+    au!
+    au FileType lex setlocal foldmethod=marker foldmarker={,}
 augroup END
 " }}}
 " HTML {{{
