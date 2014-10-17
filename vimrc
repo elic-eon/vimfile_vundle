@@ -195,13 +195,15 @@ augroup END
 " HTML {{{
 augroup ft_html
     au!
-    au FileType html setlocal foldmethod=indent tabstop=2
+    au FileType html setlocal foldmethod=indent
+    au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
 " }}}
 " HTML {{{
 augroup ft_vimwiki
     au!
-    au FileType vimwiki setlocal foldmethod=indent tabstop=2
+    au FileType vimwiki setlocal foldmethod=indent
+    au FileType vimwiki setlocal tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
 " }}}
 " }}}
