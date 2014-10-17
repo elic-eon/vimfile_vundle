@@ -56,6 +56,8 @@ set colorcolumn=+1
 set textwidth=80
 
 " tab setting
+set softtabstop=4
+set shiftwidth=4
 set tabstop=4
 
 " Don't try to highlight lines longer than 800 characters.
