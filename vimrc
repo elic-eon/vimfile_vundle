@@ -160,6 +160,8 @@ inoremap <c-f> <c-x><c-f>
 inoremap <c-]> <c-x><c-]>
 inoremap <c-l> <c-x><c-l>
 
+" paste mode toggle
+nnoremap <leader>o :set paste!<CR>
 " }}}
 
 " }}}
