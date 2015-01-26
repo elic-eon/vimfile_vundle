@@ -52,8 +52,8 @@ filetype plugin on                    " enable filetype-specific plugins
 syntax on                             " syntax highlight
 set hlsearch                          " search highlighting
 set incsearch                         " incremental search
-set colorcolumn=+1
-set textwidth=80
+set colorcolumn=81
+set textwidth=999
 
 " tab setting
 set softtabstop=4
@@ -188,10 +188,22 @@ augroup ft_c
     au FileType c setlocal foldmethod=marker foldmarker={,}
 augroup END
 " }}}
+" CPP {{{
+augroup ft_cpp
+    au!
+    au FileType cpp setlocal foldmethod=marker foldmarker={,}
+augroup END
+" }}}
 " lex {{{
 augroup ft_lex
     au!
     au FileType lex setlocal foldmethod=marker foldmarker={,}
+augroup END
+" }}}
+" yacc {{{
+augroup ft_yacc
+    au!
+    au FileType yacc setlocal foldmethod=marker foldmarker={,}
 augroup END
 " }}}
 " HTML {{{
