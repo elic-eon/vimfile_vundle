@@ -213,7 +213,7 @@ augroup ft_html
     au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
 " }}}
-" HTML {{{
+" vimwiki {{{
 augroup ft_vimwiki
     au!
     au FileType vimwiki setlocal foldmethod=indent
