@@ -220,6 +220,13 @@ augroup ft_vimwiki
     au FileType vimwiki setlocal tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
 " }}}
+" python {{{
+augroup ft_python
+    au!
+    au FileType python setlocal foldmethod=indent
+    au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+augroup END
+" }}}
 " }}}
 " Plugin --------------------------------------------------------------------{{{
 
@@ -230,7 +237,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " Tagbar {{{
 let g:tagbar_left=1
 let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
+let g:tagbar_autoclose=0
 "}}}
 
 " mult-cursor {{{
