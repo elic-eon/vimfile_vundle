@@ -228,13 +228,6 @@ augroup ft_python
     au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 augroup END
 " }}}
-" {{{
-augroup ft_vimwiki
-    au!
-    au FileType vimwiki setlocal foldmethod=indent
-    au FileType vimwiki setlocal tabstop=2 shiftwidth=2 softtabstop=2
-augroup END
-" }}}
 " }}}
 " Plugin --------------------------------------------------------------------{{{
 
