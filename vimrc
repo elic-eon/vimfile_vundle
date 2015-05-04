@@ -32,6 +32,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'sudar/vim-arduino-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
