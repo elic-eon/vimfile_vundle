@@ -1,8 +1,8 @@
 ### vimfile vundle
 
 #### Install
-1. ``` git clone https://github.com/elic-eon/vimfile_vundle.git ~/vimfile_vundle ```  
-2. ``` ln -s vimfile_vundle ~/.vim ```
+1. ``` git clone https://github.com/elic-eon/vimfile_vundle.git ~/vimfile ```  
+2. ``` ln -s ~/vimfile ~/.vim ```
 3. ``` ln -s ~/.vim/vimrc ~/.vimrc ```
 4. ``` git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim ```
 5. # ``` vim ```
@@ -14,15 +14,15 @@
 1. Plugin 'bling/vim-airline'  
   beautiful status line required powerline-patched font
 1. Plugin 'scrooloose/nerdtree'  
-  press F2 to toogle nerdtree split
+  press `<F2>` to toogle nerdtree split
 1. Plugin 'scrooloose/nerdcommenter'  
-  press <leader><leader> to comment one line
+  press `<leader><leader>` to comment one line
 1. Plugin 'godlygeek/tabular'  
 1. Plugin 'plasticboy/vim-markdown'  
 1. Plugin 'flazz/vim-colorschemes'  
   port colorschemes
 1. Plugin 'kien/ctrlp.vim'  
-  press ^p to search
+  press `^p` to search
 1. Plugin 'mileszs/ack.vim'  
 1. Plugin 'vim-scripts/Align'  
 1. Plugin 'Raimondi/delimitMate'  
