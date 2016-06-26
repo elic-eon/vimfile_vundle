@@ -1,5 +1,5 @@
-	" vundle --------------------------------------------------------------------{{{
-set nocompatible              " be iMproved, required
+" vundle --------------------------------------------------------------------{{{
+set nocompatible              " be improved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -34,6 +34,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'lervag/vimtex'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,10 +63,11 @@ set softtabstop=4
 set shiftwidth=4
 set tabstop=4
 set backspace=2
+set expandtab
 
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
-"" bo backup file
+"" no backup file
 set nobackup                          " no *~ backup files
 set noswapfile
 set nowritebackup
@@ -109,6 +111,10 @@ set splitright
 set foldcolumn=1
 set foldlevel=100
 set foldmethod=marker
+
+" indentLine
+let g:indentLine_color_term = 239
+let g:indentLine_char = '¦'
 
 " command height
 set cmdheight=2
@@ -226,6 +232,13 @@ augroup ft_javascript
     au FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 augroup END
 " }}}
+" Javascript {{{
+augroup ft_javascript
+    au!
+    au FileType javascript setlocal foldmethod=indent
+    au FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+augroup END
+" }}}
 " vimwiki {{{
 augroup ft_vimwiki
     au!
@@ -238,6 +251,13 @@ augroup ft_python
     au!
     au FileType python setlocal foldmethod=indent
     au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+augroup END
+" }}}
+" shell {{{
+augroup ft_sh
+    au!
+    au FileType sh setlocal foldmethod=indent
+    au FileType sh setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 augroup END
 " }}}
 " }}}
@@ -262,10 +282,10 @@ let g:multi_cursor_start_key='<F6>'
 let vimwiki_path=$HOME.'/vimwiki/'
 let vimwiki_html_path=$HOME.'/vimwiki_html/'
 let g:vimwiki_list = [{'path_html':vimwiki_html_path,
-			\ 'template_path':vimwiki_html_path.'vimwiki-assets/',
-			\ 'template_default': 'default',
-			\ 'template_ext': '.tpl',
-			\ 'auto_export': 0}]
+            \ 'template_path':vimwiki_html_path.'vimwiki-assets/',
+            \ 'template_default': 'default',
+            \ 'template_ext': '.tpl',
+            \ 'auto_export': 0}]
 nnoremap <leader>wha :VimwikiAll2HTML<CR>
 "}}}
 "}}}
