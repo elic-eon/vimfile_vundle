@@ -1,4 +1,4 @@
-" vundle --------------------------------------------------------------------{{{
+	" vundle --------------------------------------------------------------------{{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -33,6 +33,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,6 +61,7 @@ set textwidth=999
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
+set backspace=2
 
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
@@ -92,7 +94,7 @@ set cursorline
 " special char
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:-
-nmap <leader>l :set list!<CR>
+nmap <leader>k :set list!<CR>
 "set showbreak=↪
 
 " seem useless
@@ -110,6 +112,9 @@ set foldmethod=marker
 
 " command height
 set cmdheight=2
+
+" font
+set guifont=Monaco\ for\ Powerline:h14
 " }}}
 " key mapping --------------------------------------------------------------{{{
 
@@ -211,7 +216,14 @@ augroup END
 augroup ft_html
     au!
     au FileType html setlocal foldmethod=indent
-    au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+    au FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+augroup END
+" }}}
+" JavaScript {{{
+augroup ft_javascript
+    au!
+    au FileType javascript setlocal foldmethod=indent
+    au FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 augroup END
 " }}}
 " vimwiki {{{
